@@ -1,0 +1,21 @@
+.loans-table thead tr {
+  background-color: #34495e;
+  color: white;
+}
+
+.loans-table thead th {
+  padding: 1rem;
+  text-align: left;
+}
+
+.loans-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.loans-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.loans-table tbody td {
+  padding: 1rem;
+}

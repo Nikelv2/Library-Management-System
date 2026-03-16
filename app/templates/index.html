@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibryFlow Public Library</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>LibryFlow Public Library</h1>
+      <div id="user-info" class="user-info"></div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Login</h2>
+        <form id="login-form">
+          <label>
+            Username
+            <input type="text" id="login-username" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="login-password" required />
+          </label>
+          <div class="actions">
+            <button type="submit">Log In</button>
+            <button type="button" id="logout-btn">Log Out</button>
+          </div>
+          <p id="login-error" class="error"></p>
+        </form>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Books</h2>
+          <div id="books-list" class="list"></div>
+        </div>
+        <div class="card">
+          <h2>My Loans</h2>
+          <div id="my-loans" class="list"></div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Reservations Pending Pickup</h2>
+          <div id="pending-reservations" class="list"></div>
+        </div>
+        <div class="card">
+          <h2>Active Loans</h2>
+          <div id="active-loans" class="list"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>System Settings (Librarian)</h2>
+        <form id="settings-form">
+          <label>
+            Pickup window (days)
+            <input type="number" id="pickup-window" min="1" max="14" required />
+          </label>
+          <label>
+            Standard loan period (days)
+            <input type="number" id="loan-days" min="1" max="120" required />
+          </label>
+          <label>
+            Daily fine amount
+            <input type="number" id="daily-fine" step="0.01" min="0" max="100" required />
+          </label>
+          <div class="actions">
+            <button type="submit">Save Settings</button>
+          </div>
+          <p id="settings-message" class="hint"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
